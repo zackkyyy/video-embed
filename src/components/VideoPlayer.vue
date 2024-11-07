@@ -14,10 +14,14 @@
       stream-type="on-demand"
       cross-origin="anonymous"
     >
-      <media-provider></media-provider>
-      <media-video-layout
-        thumbnails="https://files.vidstack.io/sprite-fight/thumbnails.vtt"
-      ></media-video-layout>
+      <media-poster
+        v-if="thumbUrl"
+        :src="thumbUrl"
+        class="vds-poster"
+      ></media-poster>
+      <media-provider> </media-provider>
+      <media-video-layout color-scheme="light" no-audio-gain>
+      </media-video-layout>
     </media-player>
   </div>
 </template>
